@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AVENOIR — Fresh Finds</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="nav">
+      <button class="icon-btn menu-btn" aria-label="Menu">☰</button>
+      <a class="brand" href="#"><span class="brand-mark">✦</span> AVENOIR</a>
+      <div class="search"><span>⌕</span><input id="searchInput" placeholder="Search products, categories..." autocomplete="off"></div>
+      <button class="icon-btn" aria-label="Wishlist">♡</button>
+      <button class="account" aria-label="Account">A</button>
+      <button class="cart-btn" id="cartBtn">🛒 <b id="cartCount">0</b></button>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">FRESH COLLECTION</span>
+        <h1>Fresh finds,<br><em>beautifully</em> delivered.</h1>
+        <p>Discover everyday essentials and fresh picks, selected with care and delivered to your door.</p>
+        <button class="primary" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Shop now <span>→</span></button>
+      </div>
+      <div class="hero-art">
+        <div class="sale-badge"><strong>SALE OFF!</strong><br><span>Up to 30% today</span></div>
+        <div class="blob"></div>
+        <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=900&q=85" alt="Fresh groceries">
+        <div class="leaf leaf1">🥬</div><div class="leaf leaf2">🥕</div><div class="leaf leaf3">🍅</div>
+      </div>
+    </section>
+
+    <section class="section-head">
+      <div><span class="eyebrow">CURATED FOR YOU</span><h2>Fresh picks</h2></div>
+      <div class="arrows"><button id="prev">←</button><button id="next">→</button></div>
+    </section>
+
+    <section id="products" class="products"></section>
+
+    <section class="category-strip">
+      <div><span>01</span><h3>Fresh Produce</h3><p>Greens, fruits & daily essentials</p></div>
+      <div><span>02</span><h3>Pantry Picks</h3><p>Beautiful basics for every kitchen</p></div>
+      <div><span>03</span><h3>Best Sellers</h3><p>Customer-loved everyday favorites</p></div>
+    </section>
+
+    <section class="trust">
+      <div><span>🚚</span><div><b>Free Shipping</b><small>On every order</small></div></div>
+      <div><span>↺</span><div><b>Easy Returns</b><small>Simple & hassle-free</small></div></div>
+      <div><span>✓</span><div><b>Quality Checked</b><small>Selected with care</small></div></div>
+      <div><span>◷</span><div><b>Tracked Delivery</b><small>Stay updated daily</small></div></div>
+    </section>
+
+    <footer>
+      <div class="footer-brand"><span class="brand-mark">✦</span> AVENOIR</div>
+      <p>Everyday essentials, styled simply.</p>
+      <div class="footer-links"><a href="#">Shop</a><a href="#">About</a><a href="#">Orders</a><a href="#">Contact</a></div>
+      <small>© 2026 AVENOIR. All rights reserved.</small>
+    </footer>
+  </main>
+
+  <aside class="cart-panel" id="cartPanel">
+    <div class="cart-head"><h2>Your cart</h2><button id="closeCart">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-total"><span>Total</span><b id="cartTotal">$0.00</b></div>
+    <button class="primary full" id="checkout">Checkout →</button>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+  <script src="app.js"></script>
+</body>
+</html>
